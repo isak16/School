@@ -21,7 +21,7 @@ var personObjects = {
     "persons": [
         {
             "name": "David",
-            "personnr": "950214-9157"
+            "personnr": "950224-9257"
         }
         ,
         {
@@ -133,38 +133,47 @@ function returnOlderThan(arr, comparAge){
 }
 
 
-//
-//
+
 
 /**
  *
- * Personnumret är uppbyggt efter luhn Algoritm, samma system som används för att validera kreditkort.
- * Jag hämtade fram en färdig RegExp och uträkning på den från github.
- * https://gist.github.com/DiegoSalazar/4075533
- *
  * @param value
- * Personnr
  * @returns {boolean}
+ * Ifall numret är validerat retuneras true
  */
 function validatePersonnr(value) {
-    // accept only digits, dashes or spaces
-    if (/[^0-9-\s]+/.test(value)) return false;
+    var totalValue = 0;
+    var cleanValue = value.replace(/\D/g, '');
 
-    // The Luhn Algorithm. It's so pretty.
-    var nCheck = 0, nDigit = 0, bEven = false;
-    value = value.replace(/\D/g, "");
+    //Loopar igenom personnumret
+    for(var i = 0; i < cleanValue.length-1; i++){
+        var loopValue = cleanValue[i];
 
-    for (var n = value.length - 1; n >= 0; n--) {
-        var cDigit = value.charAt(n);
-            nDigit = parseInt(cDigit, 10);
+        //Enligt s.k. modulus-10-metoden
 
-        if (bEven) {
-            if ((nDigit *= 2) > 9) nDigit -= 9;
+        if(i %2== 0){
+            loopValue = loopValue*2;
+            //Värden över 10 räknas som 1+0
+            if(loopValue >= 10){
+                loopValue = loopValue.toString();
+                totalValue += 1 + parseInt(loopValue[1]);
+
+            }else{
+                totalValue += parseInt(loopValue);
+            }
+
+        }else{
+            totalValue += parseInt(loopValue);
+
         }
 
-        nCheck += nDigit;
-        bEven = !bEven;
     }
 
-    return (nCheck % 10) == 0;
+    //Tar sista siffran i totalvärdet minus 10, för att sedan jämföra med kontrollsiffran
+    var lastNumberIntTotal = 10 - totalValue.toString().split('').pop();
+    var lastNumberInInputValue = cleanValue.toString().split('').pop();
+
+    return lastNumberInInputValue == lastNumberIntTotal;
+
+
 }
