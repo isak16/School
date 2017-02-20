@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<html>
+<head>
+    <script src="http://localhost:63342/Skola/html%205/Labb%203/bower_components/angular/angular.js"></script>
+    <script src="https://unpkg.com/ui-router-ng2@1.0.0-beta.4/_bundles/ui-router-ng2.js"></script>
+    <script src="http://localhost:63342/Skola/html%205/Labb%203/js/script.js"></script>
+
+</head>
+
+<body ng-app="app">
+
+
+<style>.active { color: red; font-weight: bold; }</style>
+
+<a ui-sref="hello" ui-sref-active="active">Hello</a>
+<a ui-sref="about" ui-sref-active="active">About</a>
+
+<ui-view></ui-view>
+</body>
+
+</html>

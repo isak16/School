@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
+<body>
+
+<div ng-controller="TestController">
+
+    <button ng-click="isMomsOpen = !isMomsOpen" type="button">Button</button>
+
+    <div ng-show="isMomsOpen">
+        <input ng-disabled="moms" ng-keypress="myFunct($event)" type="number" ng-model="x">
+        <span ng-hide="!x">{{'Moms: ' + 0.2*x}}</span>
+    </div>
+
+
+    <div ng-bind="totalValue"></div>
+
+    <div ng-repeat="n in arr track by $index" >
+        <span ng-click="remove($index)">Moms: {{n}}</span>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script src="../../node_modules/bower_components/angular/angular.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

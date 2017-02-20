@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
+<body>
+
+<input type="checkbox" name="Html or nah" ng-model="insert">Include html<br>
+
+
+
+<div ng-repeat="n in [1, 2, 3]" ng-if="insert" >
+    <h2>Diven har repeterats {{n}}</h2>
+    <br>
+    <span ng-include="'partial.html'"></span>
+</div>
+
+
+<script src="../node_modules/bower_components/angular/angular.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+/**
+ * Created by isak16 on 2017-02-20.
+ */
+var app = angular.module('app', []);
+
+app.controller('TestController', function($scope) {
+    $scope.arr = [];
+
+    $scope.myFunct = function(keyEvent) {
+        if (keyEvent.which === 13 && $scope.x){
+            $scope.arr.push(0.2*$scope.x);
+            $scope.x = "";
+        }
+    };
+
+    $scope.remove = function (index) {
+        $scope.arr.splice(index, 1);
+
+    };
+
+    $scope.$watch('arr', function (newVal) {
+        $scope.totalValue = calcValueFromArr(newVal);
+    }, true);
+
+});
+
+
+function calcValueFromArr(arr){
+    var tempVar = 0;
+    for(var i = 0; i < arr.length; i++){
+        tempVar += arr[i];
+    }
+    return tempVar;
+}

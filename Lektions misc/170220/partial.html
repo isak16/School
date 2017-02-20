@@ -1,0 +1,17 @@
+<input type="checkbox" name="Moms or nah" ng-model="moms">Text input<br>
+
+<input ng-disabled="moms" type="number" ng-model="x">
+<span ng-hide="!x">{{'Moms: ' + 0.2*x}}</span>
+
+
+<br>
+
+<span ng-show="x == 0">Fel!</span>
+<span ng-if="x >= 1000">Gratis frakt!</span>
+
+<br>
+<br>
+{{'Hello' + ' ' + 'world'}}
+<br>
+<br>
+
