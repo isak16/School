@@ -1,0 +1,15 @@
+header{
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.27);
+  height: 8.5%;
+  color: #d8d8d8;
+  font-size: $vw-size-header;
+  font-family: $default-font;
+}
+
+.align-text-vert-div{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float:left;
+}
