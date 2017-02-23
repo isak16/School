@@ -9,18 +9,50 @@
 <div ng-controller="TestController">
 
     <button ng-click="isMomsOpen = !isMomsOpen" type="button">Button</button>
+    <input type="checkbox" ng-click="orderBool = !orderBool">
 
-    <div ng-show="isMomsOpen">
-        <input ng-disabled="moms" ng-keypress="myFunct($event)" type="number" ng-model="x">
-        <span ng-hide="!x">{{'Moms: ' + 0.2*x}}</span>
+
+    <div ng-show="true">
+        <input ng-disabled="moms" ng-keypress="addToArr($event,'moms')" type="number" ng-model="x">
+        <span ng-hide="!x">{{'Moms: ' + (0.2*x | number:3) }}</span>
     </div>
 
 
     <div ng-bind="totalValue"></div>
 
-    <div ng-repeat="n in arr track by $index" >
-        <span ng-click="remove($index)">Moms: {{n}}</span>
+    <div ng-repeat="n in arr  | orderBy:'-':orderBool | limitTo: 5 track by $index">
+        <span ng-click="remove($index)">Moms: {{ n | number:2 }}</span>
     </div>
+
+    <div>
+        <form name="form" ng-keypress="addToArr($event, 'persons')">
+            <input  ng-model="personObj.name" placeholder="Name">
+            <input  ng-model="personObj.age" placeholder="Age">
+            <input  ng-model="personObj.gender" placeholder="Gender">
+        </form>
+
+
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <th>Age:</th>
+                    <th>Gender:</th>
+                </tr>
+
+                <tr ng-repeat="obj in personArr | orderBy:['age','name'] track by $index">
+                    <td> {{ obj.name }}</td>
+                    <td> {{ obj.age }}</td>
+                    <td> {{ obj.gender }}</td>
+                </tr>
+
+
+            </table>
+
+
+
+    </div>
+
+
 
 
 </div>

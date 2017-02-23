@@ -5,11 +5,21 @@ var app = angular.module('app', []);
 
 app.controller('TestController', function($scope) {
     $scope.arr = [];
+    $scope.personArr = [];
+  //  $scope.personObj = {};
 
-    $scope.myFunct = function(keyEvent) {
-        if (keyEvent.which === 13 && $scope.x){
+
+    $scope.addToArr = function(keyEvent, from) {
+        if(keyEvent.which !== 13) return;
+
+        if ($scope.x && from === 'moms'){
             $scope.arr.push(0.2*$scope.x);
             $scope.x = "";
+        }
+        if ($scope.personObj.name && from === 'persons'){
+            $scope.personArr.push($scope.personObj);
+            $scope.personObj = {};
+
         }
     };
 
@@ -21,6 +31,10 @@ app.controller('TestController', function($scope) {
     $scope.$watch('arr', function (newVal) {
         $scope.totalValue = calcValueFromArr(newVal);
     }, true);
+
+
+
+
 
 });
 
