@@ -1,0 +1,34 @@
+.main-content{
+  background-color: $maincontent-bg-color;
+  height: 83%;
+}
+
+
+.slider{
+  position:relative;
+  margin-top: 2%;
+  display: inline-block;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+.start-page{
+
+}
+
+.start-page p{
+  font-family:  $default-font;
+  color: $font-color;
+  font-size: 3vw;
+  text-align: center;
+
+}
+
+
+
+.fairtrade-page{
+  display: none;
+}

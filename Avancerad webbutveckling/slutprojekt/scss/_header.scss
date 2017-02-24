@@ -1,10 +1,6 @@
 header{
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.27);
+  background-color: $header-footer-bg-color;
   height: 8.5%;
-  color: #d8d8d8;
-  font-size: $vw-size-header;
-  font-family: $default-font;
 }
 
 .align-text-vert-div{
@@ -12,4 +8,12 @@ header{
   top: 50%;
   transform: translateY(-50%);
   float:left;
+}
+
+header a{
+  color: $font-color;
+  text-decoration: none;
+  font-size: $vw-size-header;
+  font-family: $default-font;
+  padding: 0;
 }

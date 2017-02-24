@@ -1,6 +1,16 @@
 footer{
-  background-color: rgba(0, 0, 0, 0.27);
-  height: 8.5%;
   position: absolute;
+  background-color: $header-footer-bg-color;
+  height: 8.5%;
   bottom: 0;
+  color: $font-color;
+  font-family: $default-font;
+  display: inline-block;
+}
+
+footer p{
+  height: 100%;
+  font-size: $vw-size-header;
+  margin: 0;
+
 }
