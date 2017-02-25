@@ -59,7 +59,7 @@ var personObjects = {
 
 
 console.log(returnOlderThan(personObjects, 18));
-console.log(isBirthday("980221"));
+console.log(isBirthday("980224"));
 
 
 

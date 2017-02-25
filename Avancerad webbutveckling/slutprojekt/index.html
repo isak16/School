@@ -10,9 +10,9 @@
 <body>
 <header class="twelve">
     <a class="logo one offset-one align-text-vert-div" href="#">WeCoffe&reg;</a>
-    <a class="start-button one offset-six align-text-vert-div" href="#">Start</a>
+    <a class="start-button one offset-six align-text-vert-div active" href="#">Start</a>
     <a class="coffee-button one align-text-vert-div" href="#">Coffee</a>
-    <a class="fairtrade-button one align-text-vert-div" href="#">Fairtrade</a>
+    <a class="location-button one align-text-vert-div" href="#">Location</a>
 </header>
 
 
@@ -28,15 +28,20 @@
         </p>
     </div>
 
+
+
     <div class="coffee-page">
+        <div class="offset-three six search-bar">
+            <form class="three">
+                <input type="text" placeholder="Search....">
+            </form>
 
-        <input type="text">
-        <input type="button" placeholder="Search">
+        </div>
 
-        <div class="six offset-three">
+        <div class="six offset-three coffee-elements">
             <div class="two coffee-wrapper">
                 <img src="images/coffee/10119_eko_morkrost_450g_trim-129x190.png">
-                <p>Eko Mörkrost</p>
+                <p>Mörkrost</p>
             </div>
             <div class="two coffee-wrapper">
                 <img src="images/coffee/10198_kharisma_450g_trim-129x190.png">
@@ -54,8 +59,19 @@
         </div>
     </div>
 
-    <div class="fairtrade-page">
-Fairtrade
+
+
+    <div class="location-page">
+        <div class="six offset-three">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.3945986437857!2d100.88781831534602!3d12.946583090872348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102bdffdeb07499%3A0x71789b9887416d90!2sWe+Coffee!5e0!3m2!1ssv!2sse!4v1488046680718"
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border:0"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
     </div>
 
 </div>
@@ -68,5 +84,6 @@ Fairtrade
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="js/customJquery.js"></script>
 <script src="js/navigation-jquery.js"></script>
+<script src="js/search-bar.js"></script>
 </body>
 </html>

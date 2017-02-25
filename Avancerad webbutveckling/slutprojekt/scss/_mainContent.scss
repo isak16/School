@@ -1,12 +1,13 @@
 .main-content{
   background-color: $maincontent-bg-color;
   height: 83%;
+  padding-bottom: 10%;
 }
 
 
 .slider{
   position:relative;
-  margin-top: 2%;
+  margin-top: 6%;
   display: inline-block;
 }
 
@@ -28,7 +29,3 @@
 }
 
 
-
-.fairtrade-page{
-  display: none;
-}

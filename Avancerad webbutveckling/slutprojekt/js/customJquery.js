@@ -2,6 +2,8 @@
  * Created by isak16 on 2017-02-23.
  */
 
+
+
 $( document ).ready(function() {
     $('.slider img:gt(0)').hide();
 

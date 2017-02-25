@@ -8,21 +8,38 @@ $( document ).ready(function() {
     $('.logo').click(function(){
         mainContent.children().hide();
         startPage.show();
+        removeOtherActiveInHeader();
+        $('.start-button').addClass("active");
     });
 
     $('.start-button').click(function(){
         mainContent.children().hide();
         startPage.show();
+        removeOtherActiveInHeader();
+        $(this).addClass("active");
     });
 
     $('.coffee-button').click(function(){
         mainContent.children().hide();
        $('.coffee-page').show();
+        removeOtherActiveInHeader();
+        $(this).addClass("active");
+
     });
 
-    $('.fairtrade-button').click(function(){
+    $('.location-button').click(function(){
         mainContent.children().hide();
-       $('.fairtrade-page').show();
+       $('.location-page').show();
+        removeOtherActiveInHeader();
+        $(this).addClass("active");
     });
 
 });
+
+
+
+function removeOtherActiveInHeader(){
+    $('header a').each(function() {
+        $(this).removeClass("active");
+    });
+}
