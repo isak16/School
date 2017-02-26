@@ -2,7 +2,6 @@
 @import "_body";
 @import "_grid";
 @import "_header";
-@import "_footer";
 @import "_offsets";
 @import "_mainContent";
 @import "_coffee";
@@ -10,3 +9,35 @@
 
 
 
+@media (min-width: $screen-xs) {
+  header a{
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  header a{
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: $screen-md) {
+  header a{
+    font-size: 1.8vw;
+  }
+
+}
+
+@media (min-width: $screen-lg) {
+  header a{
+    font-size: 1.5vw;
+  }
+
+}
+
+@media (min-width: $screen-xl) {
+  header a{
+    font-size: 1.3vw;
+  }
+
+}

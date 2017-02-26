@@ -1,13 +1,13 @@
 .main-content{
   background-color: $maincontent-bg-color;
   height: 83%;
-  padding-bottom: 10%;
+  padding-bottom: 20%;
 }
 
 
 .slider{
   position:relative;
-  margin-top: 6%;
+  margin-top: 3%;
   display: inline-block;
 }
 
@@ -23,7 +23,7 @@
 .start-page p{
   font-family:  $default-font;
   color: $font-color;
-  font-size: 3vw;
+  font-size: $content-paragraph;
   text-align: center;
 
 }

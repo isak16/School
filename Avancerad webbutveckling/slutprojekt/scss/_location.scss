@@ -1,4 +1,22 @@
 
 .location-page{
   display: none;
+  text-align: center;
+  height: 100%;
+}
+.location-map{
+  height: 50%;
+}
+
+.location-map iframe{
+  display: inline-block;
+  margin-top: 9%;
+  width: 100%;
+  height: 100%;
+}
+
+.location-map p{
+  color: $font-color;
+  font-family: $default-font;
+  font-size: $content-paragraph;
 }
