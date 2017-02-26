@@ -2,6 +2,7 @@
   background-color: $maincontent-bg-color;
   height: 83%;
   padding-bottom: 20%;
+  display: none;
 }
 
 
@@ -16,16 +17,12 @@
   height: auto;
 }
 
-.start-page{
-
-}
-
-.start-page p{
-  font-family:  $default-font;
+.start-articles article{
+  font-family: $default-font;
   color: $font-color;
-  font-size: $content-paragraph;
-  text-align: center;
-
+  background-color: rgba(0, 0, 0, 0.41);
 }
 
-
+.top-buffer {
+  margin-top:20px;
+}

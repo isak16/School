@@ -2,7 +2,7 @@
  * Created by isak16 on 2017-02-23.
  */
 $( document ).ready(function() {
-    var mainContent = $('.main-content');
+    var mainContent = $('.all-content');
     var startPage = $('.start-page');
 
     $('.logo').click(function(){
