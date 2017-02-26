@@ -1,14 +1,14 @@
-.main-content{
-  background-color: $maincontent-bg-color;
-  height: 83%;
-  padding-bottom: 20%;
-  display: none;
+.home-page{
+  padding-top: 3%;
+  height: 100%;
 }
-
+.all-content{
+  padding-top: 49px;
+  height: 100%;
+}
 
 .slider{
   position:relative;
-  margin-top: 3%;
   display: inline-block;
 }
 
@@ -17,12 +17,15 @@
   height: auto;
 }
 
-.start-articles article{
+.home-articles article{
   font-family: $default-font;
   color: $font-color;
-  background-color: rgba(0, 0, 0, 0.41);
+  background-color: rgba(0, 0, 0, 0.81);
 }
 
 .top-buffer {
   margin-top:20px;
+}
+.active-custom{
+  background-color: rgba(0, 0, 0, 0.73);
 }

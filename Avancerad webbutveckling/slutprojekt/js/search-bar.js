@@ -8,6 +8,7 @@ $( document ).ready(function() {
 
     searchbarText.keyup(function() {
         var tempSearchbarText = searchbarText[0].value.toString().toLocaleLowerCase();
+
         coffeeElements.each(function() {
             var elementText = $(this).text().trim().toString().toLocaleLowerCase();
 

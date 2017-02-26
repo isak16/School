@@ -1,22 +1,30 @@
+.contact-page{
+  padding-top: 3%;
+  height: 100%;
+}
 
-.location-page{
-  display: none;
+.map-section{
   text-align: center;
-  height: 100%;
-}
-.location-map{
-  height: 50%;
 }
 
-.location-map iframe{
-  display: inline-block;
-  margin-top: 9%;
+.map-section iframe{
   width: 100%;
-  height: 100%;
+  height: 300px;
 }
 
-.location-map p{
-  color: $font-color;
+.map-section p{
   font-family: $default-font;
-  font-size: $content-paragraph;
+  color: $font-color;
+  font-size: 32px;
+}
+
+.contact-form{
+  margin-top: 30px;
+  color: $font-color;
+  background-color: rgba(0, 0, 0, 0.60);
+  padding: 30px;
+}
+
+.noresize {
+  resize: none;
 }

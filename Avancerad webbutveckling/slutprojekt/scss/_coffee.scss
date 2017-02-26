@@ -1,5 +1,10 @@
 .coffee-page{
-  display: none;
+  height: 100%;
+}
+
+.coffee-page h2{
+  color: $font-color;
+  text-align: center;
 }
 
 .coffee-page div{
@@ -16,35 +21,30 @@
 .coffee-page div p{
   color: $font-color;
   font-family: $default-font;
-  font-size: 2.3vw;
+  font-size: 18px;
 }
 
 .coffee-wrapper{
-  background-color: rgba(0, 0, 0, 0.50);
+  background-color: rgba(0, 0, 0, 0.81);
   padding: 0 3%;
   margin-top: 5%;
   border: solid medium rgba(65, 1, 1, 0.52);
   text-align: center;
 }
 
-.coffee-page form{
-  display:inline-block;
-}
-
 .search-bar{
+  width: 100%;
   text-align: center;
-  margin-top: 3%;
 }
-
 
 .search-bar form input{
-  background-color: rgba(82, 82, 82, 0.76);
+  background-color: rgba(0, 0, 0, 0.81);
   padding: 8px;
   border: none;
   border-radius: 12px;
   color: $font-color;
   font-family: $default-font;
-  width: 100%;
+  width: 33%;
 }
 
 .search-bar form input:focus {

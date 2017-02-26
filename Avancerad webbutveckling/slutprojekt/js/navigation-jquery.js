@@ -2,44 +2,43 @@
  * Created by isak16 on 2017-02-23.
  */
 $( document ).ready(function() {
-    var mainContent = $('.all-content');
-    var startPage = $('.start-page');
 
-    $('.logo').click(function(){
-        mainContent.children().hide();
-        startPage.show();
-        removeOtherActiveInHeader();
-        $('.start-button').addClass("active");
+
+    var mainContent = $('.all-content');
+    $(mainContent).load('html/home.html');
+
+
+    $('.navbar-brand').click(function(){
+        $(".nav li").removeClass("active-custom");
+        $('.home-button').addClass("active-custom");
+        mainContent.empty();
+        $(mainContent).load('html/home.html');
     });
 
-    $('.start-button').click(function(){
-        mainContent.children().hide();
-        startPage.show();
-        removeOtherActiveInHeader();
-        $(this).addClass("active");
+    $('.home-button').click(function(){
+        mainContent.empty();
+        $(mainContent).load('html/home.html');
     });
 
     $('.coffee-button').click(function(){
-        mainContent.children().hide();
-       $('.coffee-page').show();
-        removeOtherActiveInHeader();
-        $(this).addClass("active");
-
+        mainContent.empty();
+        $(mainContent).load('html/coffee.html');
     });
 
-    $('.location-button').click(function(){
-        mainContent.children().hide();
-       $('.location-page').show();
-        removeOtherActiveInHeader();
-        $(this).addClass("active");
+    $('.recipes-button').click(function(){
+        mainContent.empty();
+        $(mainContent).load('html/recipes.html');
+    });
+
+    $('.contact-button').click(function(){
+        mainContent.empty();
+        $(mainContent).load('html/contact.html');
+    });
+
+    $(".nav li").on("click", function() {
+        $(".nav li").removeClass("active-custom");
+        $(this).addClass("active-custom");
     });
 
 });
 
-
-
-function removeOtherActiveInHeader(){
-    $('header a').each(function() {
-        $(this).removeClass("active");
-    });
-}

@@ -10,29 +10,30 @@
   color: $font-color !important;
 }
 
-.active-custom{
 
-  text-decoration: underline;
+.navbar {
+  background-color: $header-footer-bg-color;
 }
 
-.navbar {background-color: $header-footer-bg-color;}
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {
-  color: #f1f1f1;
+  color: $font-color;
 }
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #f1f1f1; background-color: rgba(0, 0, 0, 0.70);
+  color: $font-color;
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 766px) {
   .collapsing, .in {
     background-color: rgba(0, 0, 0, 0.90);
   }
-  .collapsing ul li a:hover, .in ul li a:hover {
-    color: #f1f1f1!important;
-  }
 }
 
-.navbar-default .navbar-brand:hover {
+.navbar-default .navbar-brand {
   color: $font-color !important;
+  background-color: transparent !important;
 }
+
+
