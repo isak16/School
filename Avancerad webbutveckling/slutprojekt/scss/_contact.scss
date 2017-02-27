@@ -1,0 +1,33 @@
+.contact-page {
+  padding-top: 3%;
+  height: 100%;
+  .form-group{
+    font-family: inherit;
+  }
+}
+
+.map-section {
+  text-align: center;
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  p {
+    font:{
+      family: $default-font;
+      size: 32px;
+    }
+    color: $font-color;
+  }
+}
+
+.contact-form {
+  margin-top: 30px;
+  color: $font-color;
+  background-color: rgba(0, 0, 0, 0.60);
+  padding: 30px;
+}
+
+.noresize {
+  resize: none;
+}

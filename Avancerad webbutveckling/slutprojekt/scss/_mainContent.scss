@@ -1,31 +1,28 @@
-.home-page{
+.home-page {
   padding-top: 3%;
   height: 100%;
 }
-.all-content{
+
+.all-content {
   padding-top: 49px;
   height: 100%;
 }
 
-.slider{
-  position:relative;
+.slider {
+  position: relative;
   display: inline-block;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-.slider img {
-  width: 100%;
-  height: auto;
-}
-
-.home-articles article{
+.home-articles article {
   font-family: $default-font;
   color: $font-color;
   background-color: rgba(0, 0, 0, 0.81);
 }
 
 .top-buffer {
-  margin-top:20px;
-}
-.active-custom{
-  background-color: rgba(0, 0, 0, 0.73);
+  margin-top: 20px;
 }

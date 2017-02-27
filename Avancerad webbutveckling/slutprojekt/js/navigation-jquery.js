@@ -3,10 +3,8 @@
  */
 $( document ).ready(function() {
 
-
     var mainContent = $('.all-content');
     $(mainContent).load('html/home.html');
-
 
     $('.navbar-brand').click(function(){
         $(".nav li").removeClass("active-custom");

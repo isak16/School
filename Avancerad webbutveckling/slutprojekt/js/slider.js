@@ -3,7 +3,9 @@
  */
 
 $( document ).ready(function() {
-    $('.slider img:gt(0)').hide();
+    /**
+     * Fades out the current image then fades in the next, loops every 3000ms
+     */
     setInterval(function(){
             $('.slider :first-child').fadeOut('slow', function(){
                 $('.slider :first-child').next('img').fadeIn('slow').end().appendTo('.slider');

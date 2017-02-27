@@ -1,18 +1,20 @@
-.navbar-header-custom{
+.navbar-header-custom {
   border-bottom: black;
   height: 50px;
   margin-bottom: 0;
   color: $font-color;
 }
 
+.active-custom {
+  background-color: rgba(0, 0, 0, 0.73);
+}
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
   color: $font-color !important;
 }
 
-
 .navbar {
-  background-color: $header-footer-bg-color;
+  background-color: $bg-color;
 }
 
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {

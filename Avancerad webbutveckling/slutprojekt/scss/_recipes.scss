@@ -1,21 +1,20 @@
-.recipes-page{
+.recipes-page {
   height: 100%;
   padding-top: 3%;
   padding-bottom: 3%;
 }
 
-.video-element{
+.video-element {
   height: auto;
 }
 
-.recipe-div{
+.recipe-div {
   background-color: rgba(0, 0, 0, 0.83);
   color: $font-color;
   font-family: $default-font;
   margin-left: 0;
   padding-top: 20px;
+  h3 {
+    text-align: center;
+  }
 }
-.recipe-div h3{
-  text-align: center;
-}
-
