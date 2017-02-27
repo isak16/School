@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+
+    <style>
+        input.ng-invalid{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+<div ng-controller="TestController">
+    <form name="login" novalidate>
+        <label>
+            E-mail
+            <input ng-model="credentials.email" required type="email" />
+        </label>
+        <label>
+            Password
+            <input ng-minlength="5" ng-model="credentials.password" required type="password" />
+        </label>
+        <input ng-click="signIn()" ng-disabled="!login.$valid" type="submit" value="Sign in" />
+
+        <div ng-if="login.$dirty" ng-messages="login.$error" role="alert">
+            <p ng-message="required">Daaaaaamn daniel</p>
+        </div>
+    </form>
+
+    <p ng-if="login.$valid">
+        Login is valid
+    </p>
+
+
+
+  <pre>{{credentials | json}}
+$dirty = {{login.$dirty}} / $pristine = {{login.$pristine}}
+$valid = {{login.$valid}} / $invalid = {{login.$invalid}}
+$submitted = {{login.$submitted}}</pre>
+
+
+
+
+<script src="../node_modules/bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-messages/angular-messages.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
